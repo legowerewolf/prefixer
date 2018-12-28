@@ -1,0 +1,25 @@
+{
+  "name": "legowerewolf-prefixer",
+  "version": "1.0.3",
+  "description": "Prefixer for outputs.",
+  "main": "build/prefixer.js",
+  "types": "build/prefixer.d.ts",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/legowerewolf/prefixer.git"
+  },
+  "author": "Legowerewolf",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/legowerewolf/prefixer/issues"
+  },
+  "homepage": "https://github.com/legowerewolf/prefixer#readme",
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-typescript": "^5.0.0",
+    "typescript": "^3.2.2"
+  }
+}
