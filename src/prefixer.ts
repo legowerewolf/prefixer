@@ -1,9 +1,3 @@
-export enum ErrorLevels {
-    Info = "INFO",
-    Warn = "WARN",
-    Error = "ERROR"
-}
-
 export class Prefixer {
     maxLength: number;
 
@@ -20,4 +14,17 @@ export class Prefixer {
 }
 
 export let defaultPrefixer = new Prefixer();
-export let errorLevelPrefixer = new Prefixer(...Object.keys(ErrorLevels));
+
+export enum ErrorLevels {
+    Info = "INFO",
+    Warn = "WARN",
+    Error = "ERROR"
+}
+
+let errorLevelPrefixer = new Prefixer(...Object.keys(ErrorLevels));
+
+export let errors = {
+    info: (msg: string) => errorLevelPrefixer.prefix(ErrorLevels.Info, msg),
+    warn: (msg: string) => errorLevelPrefixer.prefix(ErrorLevels.Warn, msg),
+    error: (msg: string) => errorLevelPrefixer.prefix(ErrorLevels.Error, msg),
+}

@@ -11,3 +11,8 @@ export declare class Prefixer {
 }
 export declare let defaultPrefixer: Prefixer;
 export declare let errorLevelPrefixer: Prefixer;
+export declare let errors: {
+    info: (msg: string) => string;
+    warn: (msg: string) => string;
+    error: (msg: string) => string;
+};

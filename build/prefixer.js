@@ -19,3 +19,8 @@ class Prefixer {
 exports.Prefixer = Prefixer;
 exports.defaultPrefixer = new Prefixer();
 exports.errorLevelPrefixer = new Prefixer(...Object.keys(ErrorLevels));
+exports.errors = {
+    info: (msg) => exports.errorLevelPrefixer.prefix(ErrorLevels.Info, msg),
+    warn: (msg) => exports.errorLevelPrefixer.prefix(ErrorLevels.Warn, msg),
+    error: (msg) => exports.errorLevelPrefixer.prefix(ErrorLevels.Error, msg),
+};
