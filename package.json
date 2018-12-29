@@ -1,6 +1,6 @@
 {
   "name": "legowerewolf-prefixer",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Prefixer for outputs.",
   "main": "build/prefixer.js",
   "types": "build/prefixer.d.ts",
