@@ -1,11 +1,5 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var ErrorLevels;
-(function (ErrorLevels) {
-    ErrorLevels["Info"] = "INFO";
-    ErrorLevels["Warn"] = "WARN";
-    ErrorLevels["Error"] = "ERROR";
-})(ErrorLevels = exports.ErrorLevels || (exports.ErrorLevels = {}));
 class Prefixer {
     constructor(...variants) {
         this.prefix = (variant, message) => `[${variant}]${' '.repeat(this.maxLength - variant.length - 2)}${message.toString()}`;
@@ -18,6 +12,12 @@ class Prefixer {
 }
 exports.Prefixer = Prefixer;
 exports.defaultPrefixer = new Prefixer();
+var ErrorLevels;
+(function (ErrorLevels) {
+    ErrorLevels["Info"] = "INFO";
+    ErrorLevels["Warn"] = "WARN";
+    ErrorLevels["Error"] = "ERROR";
+})(ErrorLevels = exports.ErrorLevels || (exports.ErrorLevels = {}));
 exports.errorLevelPrefixer = new Prefixer(...Object.keys(ErrorLevels));
 exports.errors = {
     info: (msg) => exports.errorLevelPrefixer.prefix(ErrorLevels.Info, msg),

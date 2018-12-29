@@ -21,7 +21,7 @@ export enum ErrorLevels {
     Error = "ERROR"
 }
 
-let errorLevelPrefixer = new Prefixer(...Object.keys(ErrorLevels));
+export let errorLevelPrefixer = new Prefixer(...Object.keys(ErrorLevels));
 
 export let errors = {
     info: (msg: string) => errorLevelPrefixer.prefix(ErrorLevels.Info, msg),

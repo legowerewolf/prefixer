@@ -1,8 +1,3 @@
-export declare enum ErrorLevels {
-    Info = "INFO",
-    Warn = "WARN",
-    Error = "ERROR"
-}
 export declare class Prefixer {
     maxLength: number;
     constructor(...variants: string[]);
@@ -10,6 +5,11 @@ export declare class Prefixer {
     prefix: (variant: string, message: Object) => string;
 }
 export declare let defaultPrefixer: Prefixer;
+export declare enum ErrorLevels {
+    Info = "INFO",
+    Warn = "WARN",
+    Error = "ERROR"
+}
 export declare let errorLevelPrefixer: Prefixer;
 export declare let errors: {
     info: (msg: string) => string;
